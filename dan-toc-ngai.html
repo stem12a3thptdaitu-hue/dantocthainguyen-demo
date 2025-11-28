@@ -2,261 +2,85 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Người Ngái - Bàn Tay Tài Hoa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            background-color: #FDF5E6; /* Màu kem đất nhạt */
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Merriweather', serif;
-        }
-        .primary-bg {
-            background-color: #5D4037; /* Màu nâu đất đậm */
-        }
-        .primary-text {
-            color: #5D4037;
-        }
-        .secondary-bg {
-            background-color: #283593; /* Màu xanh chàm đậm */
-        }
-        .text-accent {
-            color: #BF360C; /* Màu gạch nung */
-        }
-        .section-padding {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
-        .image-card {
-            transition: transform 0.3s ease-in-out;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        .image-card:hover {
-            transform: translateY(-5px);
-        }
-        /* Hiệu ứng hoa văn gạch/đan lát */
-        .pattern-bg {
-            background-image: repeating-linear-gradient(45deg, #5D4037 0, #5D4037 1px, transparent 0, transparent 50%);
-            background-size: 10px 10px;
-            opacity: 0.05;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/ethnic.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="ethnic-page ethnic-ngai"> <!-- CLASS ethnic-ngai -->
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold primary-text uppercase">Văn Hóa Người Ngái</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#gioi-thieu" class="text-gray-600 hover:text-brown-800 transition">Giới thiệu</a>
-                    <a href="#thu-cong" class="text-gray-600 hover:text-brown-800 transition">Thủ công & Trị thủy</a>
-                    <a href="#kien-truc" class="text-gray-600 hover:text-brown-800 transition">Nhà phòng thủ</a>
-                    <a href="#trang-phuc" class="text-gray-600 hover:text-brown-800 transition">Trang phục</a>
-                    <a href="#suong-co" class="text-gray-600 hover:text-brown-800 transition">Sường Cô</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🌿 THÁI NGUYÊN CULTURE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Các dân tộc</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dan-toc-tay.html">Dân tộc Tày</a></li>
+                            <!-- ... -->
+                            <li><a class="dropdown-item" href="dan-toc-ngai.html">Dân tộc Ngái</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="gioi-thieu" class="relative h-screen flex items-center justify-center primary-bg text-white overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-50">
-            <!-- Ảnh nền làng quê thanh bình -->
-            <img src="https://images.unsplash.com/photo-1518182170546-0766ce6f563b?q=80&w=2070&auto=format&fit=crop" alt="Làng quê yên bình" class="w-full h-full object-cover">
-        </div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight hover:scale-105 transition-transform duration-300 inline-block cursor-default">NGƯỜI NGÁI</h1>
-            <br>
-            <h2 class="text-xl md:text-3xl font-light mb-8 text-orange-100 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Bàn tay tài hoa & Điệu Sường Cô tình tứ</h2>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
-                Một cộng đồng ít người nhưng mang bản sắc độc đáo. Lặng lẽ gìn giữ nếp nhà đất cổ xưa và góp thêm nốt trầm sâu lắng vào bản hòa ca văn hóa Thái Nguyên.
-            </p>
-            <a href="#thu-cong" class="inline-block bg-orange-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg border border-orange-500">Khám Phá Di Sản</a>
+    <header class="ethnic-hero">
+        <img src="https://images.unsplash.com/photo-1518182170546-0766ce6f563b?q=80&w=2070&auto=format&fit=crop" class="ethnic-hero-overlay" alt="Làng quê">
+        <div class="ethnic-hero-content">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">NGƯỜI NGÁI</h1>
+            <h2 class="text-xl md:text-3xl font-light mb-8">Bàn tay tài hoa & Điệu Sường Cô tình tứ</h2>
+            <a href="#thu-cong" class="ethnic-hero-btn">Khám Phá Di Sản</a>
         </div>
     </header>
 
-    <!-- Section: Thủ công & Trị thủy -->
     <section id="thu-cong" class="section-padding bg-white relative">
-        <div class="absolute inset-0 pattern-bg"></div>
+        <div class="pattern-bg"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
-                                        <div class="mt-4 grid grid-cols-2 gap-4">
-                                                <div class="bg-orange-50 rounded-lg flex items-center justify-center p-4 text-center border border-orange-200">
-                             <span class="font-serif italic text-orange-900">"Nghệ nhân chân đất"</span>
-                        </div>
+                    <div class="bg-orange-50 rounded-lg flex items-center justify-center p-4 text-center border border-orange-200 shadow">
+                         <span class="font-serif italic text-orange-900">"Nghệ nhân chân đất"</span>
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-accent font-bold uppercase tracking-wide mb-2">Bàn tay vàng</h3>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Bậc thầy trị thủy & Thủ công</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text">Bậc thầy trị thủy & Thủ công</h2>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        Người Ngái được nể trọng bởi kỹ thuật <strong>trị thủy</strong> bậc thầy. Hệ thống mương phai được tính toán khoa học giúp mùa màng luôn tươi tốt ngay cả ở vùng đất khô cằn.
+                        Người Ngái được nể trọng bởi kỹ thuật trị thủy bậc thầy và đôi bàn tay tài hoa trong nghề thủ công, từ đóng gạch đến đan lát.
                     </p>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Không chỉ giỏi làm nông, đôi bàn tay họ còn cực kỳ tài hoa trong nghề thủ công. Từ việc tự tay đóng gạch, dựng nhà gỗ đến đan lát những chiếc mành trúc, chiếu, rổ rá vừa bền vừa đẹp.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-gray-700"><i class="fas fa-water text-blue-500 mr-2"></i> Kỹ thuật khơi mương, đắp đập điêu luyện</li>
-                        <li class="flex items-center text-gray-700"><i class="fas fa-hammer text-brown-500 mr-2"></i> Nghề mộc và nề: tự đóng gạch, dựng nhà</li>
-                        <li class="flex items-center text-gray-700"><i class="fas fa-layer-group text-yellow-600 mr-2"></i> Đan lát tinh xảo, thẩm mỹ cao</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Kiến trúc (Nhà phòng thủ) -->
-    <section id="kien-truc" class="section-padding bg-stone-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Kiến trúc Nhà "Phòng Thủ" Độc Đáo</h2>
-                <div class="w-24 h-1 bg-stone-500 mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Không gian sống biệt lập, an toàn và hòa hợp với thiên nhiên.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-stone-600">
-                    <div class="text-4xl text-stone-600 mb-4"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Tính phòng thủ cao</h3>
-                    <p class="text-gray-600">Kiến trúc xưa có tường bao quanh kín đáo, ít cửa sổ để chống thú dữ và trộm cướp, tạo cảm giác an toàn tuyệt đối.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-orange-700">
-                    <div class="text-4xl text-orange-700 mb-4"><i class="fas fa-cubes"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Gạch đất không nung</h3>
-                    <p class="text-gray-600">Gạch mộc làm từ bùn trộn nhuyễn với rơm, phơi khô. Tường dày giúp nhà mát về mùa hè và ấm áp vào mùa đông.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-blue-900">
-                    <div class="text-4xl text-blue-900 mb-4"><i class="fas fa-home"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Cấu trúc 3 gian</h3>
-                    <p class="text-gray-600">Nhà trệt (nhà đất) lợp ngói, trung thành với lối kiến trúc truyền thống khác biệt với nhà sàn của người Tày, Nùng.</p>
-                </div>
-            </div>
-             <div class="mt-12 rounded-xl overflow-hidden shadow-2xl relative">
-                                  <div class="absolute bottom-0 w-full bg-black bg-opacity-50 text-white p-2 text-center italic">
-                     Những nếp nhà đất cổ xưa bình yên dưới nắng
-                 </div>
-             </div>
-        </div>
-    </section>
-
-    <!-- Section: Trang phục -->
-    <section id="trang-phuc" class="section-padding bg-blue-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Trang phục <br><span class="text-xl font-normal italic text-blue-200">Vẻ đẹp bình dị & Chân chất</span></h2>
-                    <p class="text-blue-100 text-lg mb-6 leading-relaxed">
-                        Không rực rỡ sắc màu, trang phục người Ngái chinh phục bởi sự khỏe khoắn, thuận tiện cho lao động và toát lên vẻ đẹp của người phụ nữ chịu thương chịu khó.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-center bg-blue-800 bg-opacity-50 p-4 rounded-lg">
-                            <i class="fas fa-tshirt text-2xl mr-4 text-yellow-400"></i>
-                            <span><strong>Áo 5 thân (áo pắn):</strong> Cài khuy vải bên nách phải, dài trùm mông.</span>
-                        </div>
-                        <div class="flex items-center bg-blue-800 bg-opacity-50 p-4 rounded-lg">
-                            <i class="fas fa-palette text-2xl mr-4 text-yellow-400"></i>
-                            <span><strong>Màu sắc chủ đạo:</strong> Màu chàm (xanh đen) hoặc đen giản dị.</span>
-                        </div>
-                         <div class="flex items-center bg-blue-800 bg-opacity-50 p-4 rounded-lg">
-                            <i class="fas fa-hat-cowboy-side text-2xl mr-4 text-yellow-400"></i>
-                            <span><strong>Phụ kiện:</strong> Vấn tóc gọn gàng, đội nón lá hoặc khăn vấn đơn giản.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="grid grid-cols-2 gap-4">
-                                                <div class="bg-stone-200 h-full rounded-lg flex items-center justify-center text-stone-600 p-4">
-                            <p class="text-center font-serif italic">"Vẻ đẹp đến từ sự giản đơn"</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- NAVIGATION BOTTOM -->
+    <section class="ethnic-navigation text-center">
+        <div class="container">
+            <h4 class="mb-4 primary-text">Khám phá tiếp</h4>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="dan-toc-muong.html" class="ethnic-nav-btn"><i class="fas fa-arrow-left me-2"></i> Dân tộc Mường</a>
+                <a href="index.html" class="ethnic-nav-btn"><i class="fas fa-home me-2"></i> Trang chủ</a>
+                <a href="dan-toc-thai.html" class="ethnic-nav-btn">Dân tộc Thái <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Section: Hát Sường Cô -->
-    <section id="suong-co" class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row gap-10 items-center">
-                <div class="lg:w-1/2 relative">
-                    <div class="absolute -inset-4 bg-pink-100 rounded-full opacity-60 blur-2xl"></div>
-                                        <p class="text-center mt-4 text-gray-500 italic">"Lời ca bóng bẩy gửi gắm tình yêu đôi lứa"</p>
-                </div>
-                
-                <div class="lg:w-1/2">
-                    <span class="text-pink-600 font-bold tracking-widest uppercase mb-2 block">Hồn cốt văn hóa</span>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Điệu hát Sường Cô</h2>
-                    <p class="text-gray-600 text-lg mb-6">
-                        Nếu người Tày có Then, người Sán Dìu có Soọng Cô, thì người Ngái tự hào với Sường Cô (Sán Cố). Đây là báu vật tinh thần vô giá.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 gap-6">
-                        <div class="flex items-start">
-                            <div class="bg-pink-100 rounded-full p-3 mr-4 text-pink-600"><i class="fas fa-microphone-alt"></i></div>
-                            <div>
-                                <h4 class="font-bold text-lg">Giọng hát mộc mạc</h4>
-                                <p class="text-gray-600">Lối hát đối đáp không cần nhạc cụ, dựa hoàn toàn vào chất giọng và tài ứng tác ví von.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-pink-100 rounded-full p-3 mr-4 text-pink-600"><i class="fas fa-heart"></i></div>
-                            <div>
-                                <h4 class="font-bold text-lg">Giao duyên tình tứ</h4>
-                                <p class="text-gray-600">Cất lên trong dịp lễ tết, đám cưới hay đêm trăng thanh để nam nữ tìm hiểu, gửi trao lời yêu thương.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-stone-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-bold mb-4 font-serif">Văn Hóa Người Ngái Thái Nguyên</h2>
-            <p class="text-stone-400 mb-8 max-w-2xl mx-auto">Tổ dân phố Tam Thái (Đồng Hỷ) - Nơi lưu giữ những giá trị văn hóa độc đáo và tình tứ.</p>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="#" class="text-stone-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
-                <a href="#" class="text-stone-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
-                <a href="#" class="text-stone-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
-            </div>
-            <div class="border-t border-stone-800 pt-8 text-sm text-stone-500">
-                &copy; 2024 Bản quyền nội dung thuộc về bài viết "Người Ngái - Bàn Tay Tài Hoa Và Điệu Sường Cô".
-            </div>
+    <footer>
+        <div class="container text-center py-4">
+            <p>Dự án STEM © 2025</p>
         </div>
     </footer>
-
-    <!-- Smooth Scroll Script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
