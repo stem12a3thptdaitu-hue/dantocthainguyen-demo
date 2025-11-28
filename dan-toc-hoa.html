@@ -2,287 +2,83 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Người Hoa - Sắc Đỏ May Mắn</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            background-color: #FFF8E1; /* Màu kem vàng nhạt */
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Merriweather', serif;
-        }
-        .primary-bg {
-            background-color: #B71C1C; /* Màu đỏ đậm truyền thống */
-        }
-        .primary-text {
-            color: #B71C1C;
-        }
-        .secondary-bg {
-            background-color: #FFC107; /* Màu vàng kim */
-        }
-        .text-accent {
-            color: #F57F17; /* Màu vàng cam đậm */
-        }
-        .section-padding {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
-        .image-card {
-            transition: transform 0.3s ease-in-out;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        .image-card:hover {
-            transform: translateY(-5px);
-        }
-        /* Hiệu ứng hoa văn chữ Thọ/Vảy rồng */
-        .pattern-bg {
-            background-image: radial-gradient(#B71C1C 1px, transparent 1px);
-            background-size: 20px 20px;
-            opacity: 0.05;
-        }
-        .border-gold {
-            border-color: #FFC107;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/ethnic.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="ethnic-page ethnic-hoa"> <!-- CLASS ethnic-hoa -->
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold primary-text uppercase"><i class="fas fa-dragon mr-2"></i>Văn Hóa Người Hoa</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#gioi-thieu" class="text-gray-600 hover:text-red-700 transition">Giới thiệu</a>
-                    <a href="#kinh-te" class="text-gray-600 hover:text-red-700 transition">Thương nghiệp</a>
-                    <a href="#khong-gian" class="text-gray-600 hover:text-red-700 transition">Không gian sống</a>
-                    <a href="#am-thuc" class="text-gray-600 hover:text-red-700 transition">Ẩm thực</a>
-                    <a href="#le-hoi" class="text-gray-600 hover:text-red-700 transition">Lễ hội</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🌿 THÁI NGUYÊN CULTURE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Các dân tộc</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dan-toc-tay.html">Dân tộc Tày</a></li>
+                            <!-- ... -->
+                            <li><a class="dropdown-item" href="dan-toc-hoa.html">Dân tộc Hoa</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="gioi-thieu" class="relative h-screen flex items-center justify-center primary-bg text-white overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-60">
-            <!-- Ảnh nền đèn lồng đỏ rực rỡ -->
-            <img src="https://images.unsplash.com/photo-1548622114-1d37b8d4365c?q=80&w=2070&auto=format&fit=crop" alt="Đèn lồng đỏ lễ hội" class="w-full h-full object-cover">
-        </div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight hover:scale-105 transition-transform duration-300 inline-block cursor-default">NGƯỜI HOA</h1>
-            <br>
-            <h2 class="text-xl md:text-3xl font-light mb-8 text-yellow-300 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Sắc đỏ may mắn & Tài năng thương nghiệp</h2>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
-                Mang đến những gam màu rực rỡ và sôi động cho bức tranh văn hóa Thái Nguyên. Nổi tiếng với tư duy "Phi thương bất phú" và tinh hoa ẩm thực trứ danh.
-            </p>
-            <a href="#kinh-te" class="inline-block bg-yellow-500 text-red-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition shadow-lg border-2 border-yellow-300">Khám Phá Phố Phường</a>
+    <header class="ethnic-hero">
+        <img src="https://images.unsplash.com/photo-1548622114-1d37b8d4365c?q=80&w=2070&auto=format&fit=crop" class="ethnic-hero-overlay" alt="Đèn lồng đỏ">
+        <div class="ethnic-hero-content">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">NGƯỜI HOA</h1>
+            <h2 class="text-xl md:text-3xl font-light mb-8">Sắc đỏ may mắn & Tài năng thương nghiệp</h2>
+            <a href="#kinh-te" class="ethnic-hero-btn">Khám Phá Phố Phường</a>
         </div>
     </header>
 
-    <!-- Section: Kinh tế (Thương nghiệp) -->
     <section id="kinh-te" class="section-padding bg-white relative">
-        <div class="absolute inset-0 pattern-bg"></div>
+        <div class="pattern-bg"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
-                    <img src="https://images.unsplash.com/photo-1596468138766-9dc4620025f1?q=80&w=2070&auto=format&fit=crop" alt="Hiệu thuốc Bắc" class="w-full h-80 object-cover rounded-lg shadow-xl mb-4 image-card border-l-4 border-red-700">
-                    <div class="mt-4 bg-yellow-50 p-4 rounded-lg border border-yellow-200 shadow-sm flex items-center">
-                         <i class="fas fa-hand-holding-medical text-red-700 text-2xl mr-4"></i>
-                         <div>
-                             <h4 class="font-bold text-red-900">Nghề gia truyền</h4>
-                             <p class="text-sm text-gray-700">Bốc thuốc Bắc (Đông y) và làm hương (nhang) thơm nức tiếng.</p>
-                         </div>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1596468138766-9dc4620025f1?q=80&w=2070&auto=format&fit=crop" class="image-card w-full h-80 object-cover rounded-lg shadow-xl mb-4" alt="Thuốc Bắc">
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-accent font-bold uppercase tracking-wide mb-2">Tư duy nhạy bén</h3>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">"Phi thương bất phú"</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text">"Phi thương bất phú"</h2>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        Người Hoa định cư tại các thị trấn sầm uất (Thái Nguyên, Sông Công, Đồng Hỷ), hình thành nên những khu phố buôn bán tấp nập. Quan niệm <em>"buôn có bạn, bán có phường"</em> giúp họ liên kết chặt chẽ để cùng phát triển.
+                        Người Hoa định cư tại các thị trấn sầm uất, hình thành nên những khu phố buôn bán tấp nập. Quan niệm "buôn có bạn, bán có phường" giúp họ liên kết chặt chẽ.
                     </p>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Bên cạnh thương mại hiện đại, họ lưu giữ những nét đẹp cổ truyền. Hình ảnh những hiệu thuốc Bắc với hàng trăm ngăn tủ gỗ đựng thảo dược, thoang thoảng mùi quế, hồi là nét đặc trưng rất riêng.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-gray-700"><i class="fas fa-coins text-yellow-600 mr-2"></i> Tài năng kinh doanh bẩm sinh</li>
-                        <li class="flex items-center text-gray-700"><i class="fas fa-mortar-pestle text-yellow-600 mr-2"></i> Nghề thuốc Đông y gia truyền</li>
-                        <li class="flex items-center text-gray-700"><i class="fas fa-utensils text-yellow-600 mr-2"></i> Dịch vụ ẩm thực & thực phẩm</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Không gian sống -->
-    <section id="khong-gian" class="section-padding bg-red-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Không gian sống & Sắc đỏ thịnh vượng</h2>
-                <div class="w-24 h-1 bg-yellow-500 mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Kiến trúc "Tiền điếm hậu gia" và niềm tin tâm linh sâu sắc.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-red-600 relative overflow-hidden">
-                    <div class="absolute -right-4 -top-4 text-gray-100 text-9xl font-serif z-0 select-none">福</div>
-                    <div class="relative z-10">
-                        <div class="text-4xl text-red-600 mb-4"><i class="fas fa-home"></i></div>
-                        <h3 class="text-xl font-bold mb-2">Tiền điếm hậu gia</h3>
-                        <p class="text-gray-600">Kiến trúc kết hợp hài hòa: phía trước là cửa hàng buôn bán nhộn nhịp, phía sau là không gian sinh hoạt gia đình ấm cúng.</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-yellow-500 relative overflow-hidden">
-                     <div class="absolute -right-4 -top-4 text-gray-100 text-9xl font-serif z-0 select-none">禄</div>
-                    <div class="relative z-10">
-                        <div class="text-4xl text-yellow-500 mb-4"><i class="fas fa-palette"></i></div>
-                        <h3 class="text-xl font-bold mb-2">Sắc đỏ may mắn</h3>
-                        <p class="text-gray-600">Yêu thích màu đỏ tượng trưng cho lửa và hạnh phúc. Đèn lồng đỏ, câu đối Tết giấy hồng điều, chữ "Phúc" dán ngược luôn hiện diện.</p>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-gray-800 relative overflow-hidden">
-                     <div class="absolute -right-4 -top-4 text-gray-100 text-9xl font-serif z-0 select-none">寿</div>
-                    <div class="relative z-10">
-                        <div class="text-4xl text-gray-800 mb-4"><i class="fas fa-vihara"></i></div>
-                        <h3 class="text-xl font-bold mb-2">Tín ngưỡng thờ cúng</h3>
-                        <p class="text-gray-600">Bàn thờ Thần Tài, Thổ Địa, Quan Công luôn khói hương nghi ngút, thể hiện niềm tin vào sự bảo hộ của thần linh trong kinh doanh.</p>
-                    </div>
-                </div>
-            </div>
-             <div class="mt-12 text-center">
-                                  <p class="text-sm text-gray-500 mt-2 italic">Góc tâm linh trang trọng trong ngôi nhà người Hoa</p>
-             </div>
-        </div>
-    </section>
-
-    <!-- Section: Ẩm thực -->
-    <section id="am-thuc" class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <span class="text-red-600 font-bold tracking-widest uppercase mb-2 block">Cầu nối văn hóa</span>
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Tinh hoa Ẩm thực <br><span class="text-xl font-normal italic text-gray-600">"Ăn cơm Tàu"</span></h2>
-                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-                        Ẩm thực là niềm tự hào lớn nhất. Họ quan niệm ăn uống là <strong>"Dược thiện"</strong> (bài thuốc dưỡng sinh), chú trọng sự cân bằng ngũ vị và kỹ thuật dùng lửa ("hơi thở của chảo").
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-orange-50 p-3 rounded text-center border border-orange-200">
-                            <span class="block font-bold text-red-800">Vịt Quay</span>
-                            <span class="text-xs text-gray-500">Da giòn thịt mềm</span>
-                        </div>
-                        <div class="bg-orange-50 p-3 rounded text-center border border-orange-200">
-                            <span class="block font-bold text-red-800">Khâu Nhục</span>
-                            <span class="text-xs text-gray-500">Đậm đà hương vị</span>
-                        </div>
-                        <div class="bg-orange-50 p-3 rounded text-center border border-orange-200">
-                            <span class="block font-bold text-red-800">Dimsum</span>
-                            <span class="text-xs text-gray-500">Điểm tâm tinh tế</span>
-                        </div>
-                         <div class="bg-orange-50 p-3 rounded text-center border border-orange-200">
-                            <span class="block font-bold text-red-800">Xá Xíu</span>
-                            <span class="text-xs text-gray-500">Thơm ngon nức mũi</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="space-y-4 pt-8">
-                        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=2029&auto=format&fit=crop" alt="Dimsum há cảo" class="rounded-lg shadow-md h-48 w-full object-cover">
-                         <div class="bg-red-900 h-32 rounded-lg flex items-center justify-center p-4 text-center text-white">
-                            <span class="italic font-serif">"Hương vị say lòng thực khách"</span>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                         <div class="bg-yellow-600 h-32 rounded-lg flex items-center justify-center p-4 text-center text-white">
-                             <span class="italic font-serif">"Dược thiện dưỡng sinh"</span>
-                        </div>
-                        <img src="https://images.unsplash.com/photo-1594956328406-3844d03823f0?q=80&w=2070&auto=format&fit=crop" alt="Vịt quay" class="rounded-lg shadow-md h-48 w-full object-cover">
-                    </div>
-                </div>
+    <!-- NAVIGATION BOTTOM -->
+    <section class="ethnic-navigation text-center">
+        <div class="container">
+            <h4 class="mb-4 primary-text">Khám phá tiếp</h4>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="dan-toc-kinh.html" class="ethnic-nav-btn"><i class="fas fa-arrow-left me-2"></i> Dân tộc Kinh</a>
+                <a href="index.html" class="ethnic-nav-btn"><i class="fas fa-home me-2"></i> Trang chủ</a>
+                <a href="dan-toc-muong.html" class="ethnic-nav-btn">Dân tộc Mường <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Section: Lễ hội (Lân Sư Rồng) -->
-    <section id="le-hoi" class="section-padding bg-gray-900 text-white relative overflow-hidden">
-        <!-- Background decoration -->
-        <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-red-600 rounded-full opacity-20 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-yellow-500 rounded-full opacity-20 blur-3xl"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-yellow-400 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Lễ hội & Tiếng trống Lân - Sư - Rồng</h2>
-                <p class="max-w-3xl mx-auto text-gray-300 text-lg">
-                    Đời sống tinh thần sôi động với Tết Nguyên Đán, Nguyên Tiêu, Đoan Ngọ. Đặc biệt là nghệ thuật múa Lân - Sư - Rồng rộn rã.
-                </p>
-            </div>
-
-            <div class="flex flex-col md:flex-row gap-8 items-center justify-center">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1613045339673-832d2074f34a?q=80&w=2070&auto=format&fit=crop" alt="Múa lân sư rồng" class="rounded-xl shadow-2xl border-4 border-yellow-500 w-full transform hover:rotate-1 transition duration-500">
-                </div>
-                <div class="md:w-1/2 space-y-6">
-                    <div class="flex items-start">
-                         <div class="flex-shrink-0 bg-red-600 rounded-full p-3 mr-4"><i class="fas fa-drum text-white"></i></div>
-                         <div>
-                             <h4 class="text-xl font-bold text-white mb-2">Tiếng trống rộn rã</h4>
-                             <p class="text-gray-400">Vang lên trong các dịp khai trương, lễ tết để xua đuổi tà ma, đón rước tài lộc và bình an.</p>
-                         </div>
-                    </div>
-                    <div class="flex items-start">
-                         <div class="flex-shrink-0 bg-yellow-600 rounded-full p-3 mr-4"><i class="fas fa-mask text-white"></i></div>
-                         <div>
-                             <h4 class="text-xl font-bold text-white mb-2">Vũ điệu điêu luyện</h4>
-                             <p class="text-gray-400">Những chú Lân rực rỡ nhảy múa thu hút sự yêu thích của đông đảo người dân, không phân biệt dân tộc.</p>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-red-900 text-white py-12 border-t-4 border-yellow-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-bold mb-4 font-serif text-yellow-300">Văn Hóa Người Hoa Thái Nguyên</h2>
-            <p class="text-red-200 mb-8 max-w-2xl mx-auto">Sắc đỏ may mắn, tài năng kinh doanh và những lễ hội rộn ràng làm phong phú thêm bản sắc xứ Trà.</p>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="#" class="text-red-200 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
-                <a href="#" class="text-red-200 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
-                <a href="#" class="text-red-200 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
-            </div>
-            <div class="border-t border-red-800 pt-8 text-sm text-red-300">
-                &copy; 2024 Bản quyền nội dung thuộc về bài viết "Người Hoa - Sắc Đỏ May Mắn".
-            </div>
+    <footer>
+        <div class="container text-center py-4">
+            <p>Dự án STEM © 2025</p>
         </div>
     </footer>
-
-    <!-- Smooth Scroll Script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
