@@ -4,118 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Người Sán Dìu - Giai Điệu Soọng Cô</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            background-color: #FAFAFA;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Merriweather', serif;
-        }
-        .primary-bg {
-            background-color: #5D4037; /* Màu nâu đất đậm */
-        }
-        .primary-text {
-            color: #5D4037;
-        }
-        .secondary-bg {
-            background-color: #3F51B5; /* Màu xanh chàm */
-        }
-        .text-accent {
-            color: #D84315; /* Màu gạch nung/cam đậm */
-        }
-        .section-padding {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
-        .image-card {
-            transition: transform 0.3s ease-in-out;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        .image-card:hover {
-            transform: translateY(-5px);
-        }
-        /* Hiệu ứng hoa văn gợn sóng đồi núi */
-        .pattern-bg {
-            background-image: repeating-linear-gradient(45deg, #5D4037 0, #5D4037 1px, transparent 0, transparent 50%);
-            background-size: 10px 10px;
-            opacity: 0.05;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/ethnic.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="ethnic-page ethnic-sandiu"> <!-- CLASS ethnic-sandiu -->
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold primary-text">VĂN HÓA SÁN DÌU</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#gioi-thieu" class="text-gray-600 hover:text-amber-800 transition">Giới thiệu</a>
-                    <a href="#kinh-te" class="text-gray-600 hover:text-amber-800 transition">Kinh tế</a>
-                    <a href="#nha-cua" class="text-gray-600 hover:text-amber-800 transition">Nhà cửa</a>
-                    <a href="#trang-phuc" class="text-gray-600 hover:text-amber-800 transition">Trang phục</a>
-                    <a href="#van-hoa" class="text-gray-600 hover:text-amber-800 transition">Soọng Cô</a>
-                    <a href="#am-thuc" class="text-gray-600 hover:text-amber-800 transition">Ẩm thực</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🌿 THÁI NGUYÊN CULTURE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Các dân tộc</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dan-toc-tay.html">Dân tộc Tày</a></li>
+                            <li><a class="dropdown-item" href="dan-toc-nung.html">Dân tộc Nùng</a></li>
+                            <li><a class="dropdown-item" href="dan-toc-san-diu.html">Dân tộc Sán Dìu</a></li>
+                            <li><a class="dropdown-item" href="dan-toc-san-chay.html">Dân tộc Sán Chay</a></li>
+                            <li><a class="dropdown-item" href="dan-toc-dao.html">Dân tộc Dao</a></li>
+                            <li><a class="dropdown-item" href="dan-toc-hmong.html">Dân tộc H'Mông</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="gioi-thieu" class="relative h-screen flex items-center justify-center primary-bg text-white overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-50">
-            <!-- Ảnh nền vùng đồi trung du -->
-            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80&w=2066&auto=format&fit=crop" alt="Vùng đồi núi Thái Nguyên" class="w-full h-full object-cover">
-        </div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight hover:scale-105 transition-transform duration-300 inline-block cursor-default">NGƯỜI SÁN DÌU</h1>
-            <br>
-            <h2 class="text-xl md:text-3xl font-light mb-8 text-amber-100 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Những giai điệu Soọng Cô giữa đại ngàn</h2>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
-                Cộng đồng dân tộc đông đảo với sự sáng tạo độc đáo trên vùng đất đồi và làn điệu dân ca giao duyên đắm say lòng người.
-            </p>
-            <a href="#kinh-te" class="inline-block bg-white primary-text px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition shadow-lg">Khám Phá Bản Sắc</a>
+    <header class="ethnic-hero">
+        <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?q=80&w=2066&auto=format&fit=crop" class="ethnic-hero-overlay" alt="Vùng đồi núi">
+        <div class="ethnic-hero-content">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">NGƯỜI SÁN DÌU</h1>
+            <h2 class="text-xl md:text-3xl font-light mb-8">Những giai điệu Soọng Cô giữa đại ngàn</h2>
+            <a href="#kinh-te" class="ethnic-hero-btn">Khám Phá Bản Sắc</a>
         </div>
     </header>
 
-    <!-- Section: Kinh Tế (Xe Quệt) -->
+    <!-- Section: Kinh Tế -->
     <section id="kinh-te" class="section-padding bg-white relative">
-        <div class="absolute inset-0 pattern-bg"></div>
+        <div class="pattern-bg"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
-                                        <div class="mt-4 bg-amber-50 p-6 rounded-lg border-l-4 border-amber-700 shadow-sm">
+                    <div class="mt-4 secondary-bg bg-opacity-10 p-6 rounded-lg border-l-4 border-amber-700 shadow-sm">
                         <h4 class="font-bold text-amber-900 text-lg mb-2"><i class="fas fa-hammer mr-2"></i>Chiếc Xe Quệt độc đáo</h4>
                         <p class="text-gray-700 text-sm">
-                            Một sáng tạo kỹ thuật tuyệt vời (yếu tố STEM): xe không bánh, dùng sức trâu kéo, chuyên trị địa hình đường đất đồi trơn trượt mà xe có bánh phải bó tay.
+                            Một sáng tạo kỹ thuật tuyệt vời: xe không bánh, dùng sức trâu kéo, chuyên trị địa hình đường đất đồi trơn trượt.
                         </p>
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-accent font-bold uppercase tracking-wide mb-2">Văn minh đất đồi</h3>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Sự sáng tạo trên vùng bán sơn địa</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text">Sự sáng tạo trên vùng bán sơn địa</h2>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        Sinh sống chủ yếu ở vùng trung du (Đồng Hỷ, Phú Lương, Phổ Yên), người Sán Dìu phát triển nền nông nghiệp đa dạng. Họ không chỉ cấy lúa nước ở thung lũng mà còn là bậc thầy trong việc khai thác đất đồi trồng hoa màu, cây ăn quả và chăn nuôi đại gia súc.
-                    </p>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Minh chứng rõ nét nhất cho trí tuệ chinh phục tự nhiên chính là chiếc <strong>Xe Quệt</strong> - giải pháp vận chuyển thông minh trên địa hình đồi núi phức tạp.
+                        Sinh sống chủ yếu ở vùng trung du (Đồng Hỷ, Phú Lương, Phổ Yên), người Sán Dìu phát triển nền nông nghiệp đa dạng. Họ là bậc thầy trong việc khai thác đất đồi trồng hoa màu và chăn nuôi đại gia súc.
                     </p>
                     <ul class="space-y-2">
                         <li class="flex items-center text-gray-700"><i class="fas fa-check text-amber-600 mr-2"></i> Canh tác đa dạng: lúa nước & đất đồi</li>
@@ -128,35 +80,28 @@
     </section>
 
     <!-- Section: Nhà cửa -->
-    <section id="nha-cua" class="section-padding bg-stone-100">
+    <section id="nha-cua" class="section-padding secondary-bg bg-opacity-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Nếp nhà đất vững chãi</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 primary-text">Nếp nhà đất vững chãi</h2>
                 <div class="w-24 h-1 bg-amber-800 mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Kiến trúc kín đáo, hài hòa, ấm về mùa đông và mát về mùa hè.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-amber-800">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-amber-800">
                     <div class="text-4xl text-amber-800 mb-4"><i class="fas fa-home"></i></div>
                     <h3 class="text-xl font-bold mb-2">Nhà Trệt (Nhà Đất)</h3>
-                    <p class="text-gray-600">Khác với nhà sàn, người Sán Dìu trung thành với kiểu nhà đất xây gạch nung hoặc trình tường, mái lợp ngói hoặc tranh.</p>
+                    <p class="text-gray-600">Khác với nhà sàn, người Sán Dìu trung thành với kiểu nhà đất xây gạch nung hoặc trình tường.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-stone-600">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stone-600">
                     <div class="text-4xl text-stone-600 mb-4"><i class="fas fa-layer-group"></i></div>
                     <h3 class="text-xl font-bold mb-2">Tường rào đá</h3>
-                    <p class="text-gray-600">Tường rào thường được xếp bằng đá hoặc trồng cây xanh, tạo không gian biệt lập nhưng vẫn gần gũi thiên nhiên.</p>
+                    <p class="text-gray-600">Tường rào thường được xếp bằng đá hoặc trồng cây xanh, tạo không gian biệt lập.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-green-700">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-700">
                     <div class="text-4xl text-green-700 mb-4"><i class="fas fa-door-open"></i></div>
                     <h3 class="text-xl font-bold mb-2">Bố trí khoa học</h3>
-                    <p class="text-gray-600">Khuôn viên gồm nhà chính, nhà ngang (bếp) và chuồng trại được sắp xếp hợp lý, thuận tiện cho sinh hoạt.</p>
-                </div>
-            </div>
-            
-             <div class="mt-12 rounded-xl overflow-hidden shadow-2xl relative h-80">
-                                 <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full">
-                    <p class="italic text-center">"Ngôi nhà trình tường - Nét đặc trưng kiến trúc Sán Dìu"</p>
+                    <p class="text-gray-600">Khuôn viên gồm nhà chính, nhà ngang (bếp) và chuồng trại được sắp xếp hợp lý.</p>
                 </div>
             </div>
         </div>
@@ -167,7 +112,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Trang phục <br><span class="text-xl font-normal italic text-amber-200">Vẻ đẹp đằm thắm & Khỏe khoắn</span></h2>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Trang phục <br><span class="text-xl font-normal italic text-amber-200">Vẻ đẹp đằm thắm & Khỏe khoắn</span></h2>
                     <p class="text-gray-200 text-lg mb-6 leading-relaxed">
                         Trang phục phụ nữ Sán Dìu bình dị nhưng ấn tượng, toát lên vẻ đẹp của người phụ nữ vùng trung du chịu thương chịu khó.
                     </p>
@@ -175,27 +120,19 @@
                         <ul class="space-y-4">
                             <li class="flex items-start">
                                 <span class="bg-amber-600 rounded-full h-6 w-6 flex items-center justify-center text-xs mr-3 mt-1">1</span>
-                                <span><strong>Áo dài (áo chùng):</strong> Màu nâu hoặc chàm, dài quá gối, không xẻ tà, may ghép từ 4 thân vải.</span>
+                                <span><strong>Áo dài (áo chùng):</strong> Màu nâu hoặc chàm, dài quá gối, không xẻ tà.</span>
                             </li>
                             <li class="flex items-start">
                                 <span class="bg-amber-600 rounded-full h-6 w-6 flex items-center justify-center text-xs mr-3 mt-1">2</span>
-                                <span><strong>Váy mở (mộc váy):</strong> Không khâu khép kín, dùng dây lưng thắt tạo nếp gấp uyển chuyển.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-amber-600 rounded-full h-6 w-6 flex items-center justify-center text-xs mr-3 mt-1">3</span>
-                                <span><strong>Phụ kiện:</strong> Yếm đỏ/trắng tương phản, khăn mỏ quạ đen và bộ xà tích bạc bên hông.</span>
+                                <span><strong>Váy mở:</strong> Không khâu khép kín, dùng dây lưng thắt tạo nếp gấp.</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="space-y-4 mt-8">
-                                             </div>
-                    <div class="space-y-4">
-                        <div class="bg-amber-900 h-40 rounded-lg flex items-center justify-center p-4 text-center border border-amber-700">
-                             <span class="italic font-serif text-amber-100">"Áo nâu sồng - Hồn quê mộc mạc"</span>
-                        </div>
-                                            </div>
+                <div class="lg:w-1/2">
+                     <div class="bg-amber-900 h-64 rounded-lg flex items-center justify-center p-4 text-center border border-amber-700">
+                         <span class="italic font-serif text-amber-100 text-2xl">"Áo nâu sồng - Hồn quê mộc mạc"</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,109 +142,38 @@
     <section id="van-hoa" class="section-padding bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <span class="bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase">Di sản văn hóa phi vật thể quốc gia</span>
-                <br>
-                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Hồn cốt Soọng Cô</h2>
+                <span class="secondary-bg bg-opacity-20 text-indigo-800 px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase">Di sản văn hóa phi vật thể quốc gia</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6 primary-text">Hồn cốt Soọng Cô</h2>
                 <p class="max-w-3xl mx-auto text-gray-600 text-lg">
                     "Không cần nhạc cụ đệm, Soọng Cô chinh phục lòng người bằng chất giọng mộc mạc, sâu lắng, là sợi dây tơ hồng kết nối bao thế hệ."
                 </p>
             </div>
-
-            <div class="flex flex-col lg:flex-row gap-10 items-stretch">
-                <!-- Image Card -->
-                <div class="lg:w-1/2 relative group overflow-hidden rounded-2xl shadow-xl">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 p-8 text-white">
-                        <h3 class="text-2xl font-bold mb-2">Dân ca giao duyên</h3>
-                        <p class="text-gray-200">Ngân vang vào những đêm trăng sáng hay dịp hội làng.</p>
-                    </div>
-                </div>
-                
-                <!-- Content Right -->
-                <div class="lg:w-1/2 flex flex-col justify-center space-y-6">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 bg-amber-100 rounded-full p-4 mr-4">
-                            <i class="fas fa-music text-amber-800 text-2xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold mb-2 primary-text">Lời ca trữ tình</h4>
-                            <p class="text-gray-600">Thường là thơ lục bát hoặc thất ngôn, ca ngợi tình yêu đôi lứa, lao động sản xuất và răn dạy đạo lý làm người.</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-indigo-600 italic text-gray-700 shadow-sm">
-                        "Nếu người Tày có Then, người Kinh có Quan họ, thì người Sán Dìu tự hào với làn điệu Soọng Cô."
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Section: Ẩm thực -->
-    <section id="am-thuc" class="section-padding bg-orange-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-orange-800 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Độc đáo món "Cháo Thái"</h2>
-                    <p class="text-gray-700 mb-6 text-lg">
-                        Hay còn gọi là Cháo Se. Không phải cháo gạo ninh nhừ, đây là món ăn thể hiện sự cầu kỳ và tinh tế trong ẩm thực Sán Dìu.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
-                            <i class="fas fa-utensils text-orange-600 text-xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-orange-900">Cách chế biến lạ</h4>
-                                <p class="text-sm text-gray-600">Bột gạo nhào dẻo, dùng dao thái mỏng từng lát thả vào nồi nước dùng đang sôi.</p>
-                            </div>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
-                            <i class="fas fa-tint text-orange-600 text-xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-orange-900">Hương vị khó quên</h4>
-                                <p class="text-sm text-gray-600">Sợi cháo dai ngon, nước dùng ngọt thanh từ gà, sườn lợn hoặc cá.</p>
-                            </div>
-                        </div>
-                         <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
-                            <i class="fas fa-gift text-orange-600 text-xl mr-4 mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-orange-900">Đặc sản khác</h4>
-                                <p class="text-sm text-gray-600">Bánh chưng gù (bánh chưng đen) trong các dịp lễ tết.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-orange-200 rounded-full opacity-50 blur-2xl"></div>
-                                     </div>
+    <!-- NAVIGATION BOTTOM -->
+    <section class="ethnic-navigation text-center">
+        <div class="container">
+            <h4 class="mb-4 primary-text">Khám phá tiếp</h4>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="dan-toc-nung.html" class="ethnic-nav-btn"><i class="fas fa-arrow-left me-2"></i> Dân tộc Nùng</a>
+                <a href="index.html" class="ethnic-nav-btn"><i class="fas fa-home me-2"></i> Trang chủ</a>
+                <a href="dan-toc-san-chay.html" class="ethnic-nav-btn">Dân tộc Sán Chay <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-stone-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="container text-center">
             <h2 class="text-2xl font-bold mb-4 font-serif">Người Sán Dìu Thái Nguyên</h2>
-            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Hòa nhập và phát triển, đóng góp quan trọng vào bức tranh văn hóa đa dạng của vùng đất "Thủ đô gió ngàn".</p>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
-            </div>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Hòa nhập và phát triển, đóng góp quan trọng vào bức tranh văn hóa đa dạng.</p>
             <div class="border-t border-stone-800 pt-8 text-sm text-gray-500">
                 &copy; 2024 Bản quyền nội dung thuộc về bài viết "Người Sán Dìu - Những Giai Điệu Soọng Cô".
             </div>
         </div>
     </footer>
 
-    <!-- Smooth Scroll Script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
