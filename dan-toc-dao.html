@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <title>Dân tộc Dao</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/ethnic.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="ethnic-page ethnic-dao"> <!-- CLASS ethnic-dao -->
+
+    <!-- NAV GIỮ NGUYÊN -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">🌿 THÁI NGUYÊN CULTURE</a>
@@ -23,8 +28,8 @@
                             <li><a class="dropdown-item" href="dan-toc-tay.html">Dân tộc Tày</a></li>
                             <li><a class="dropdown-item" href="dan-toc-nung.html">Dân tộc Nùng</a></li>
                             <li><a class="dropdown-item" href="dan-toc-san-diu.html">Dân tộc Sán Dìu</a></li>
-                            <li><a class="dropdown-item" href="dan-toc-san-chay.html">Dân tộc Sán Chay</a></li>
-                            <li><a class="dropdown-item active" href="dan-toc-dao.html">Dân tộc Dao</a></li> <li><a class="dropdown-item" href="dan-toc-hmong.html">Dân tộc H'Mông</a></li>
+                            <li><a class="dropdown-item" href="dan-toc-dao.html">Dân tộc Dao</a></li>
+                            <li><a class="dropdown-item" href="dan-toc-hmong.html">Dân tộc H'Mông</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
@@ -33,59 +38,55 @@
         </div>
     </nav>
 
-    <div class="container my-5">
-        <h1 class="text-center fw-bold text-success mb-4">DÂN TỘC DAO</h1>
-        <p class="text-center fst-italic">Bản sắc rực rỡ và bí ẩn Lễ Cấp Sắc</p>
-        
+    <!-- HERO -->
+    <header class="ethnic-hero">
+        <img src="https://placehold.co/1920x1080?text=Nguoi+Dao" class="ethnic-hero-overlay">
+        <div class="ethnic-hero-content">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">DÂN TỘC DAO</h1>
+            <p class="text-lg max-w-2xl mx-auto mb-8">Bản sắc rực rỡ và bí ẩn Lễ Cấp Sắc</p>
+            <a href="#noi-dung" class="ethnic-hero-btn">Tìm hiểu thêm</a>
+        </div>
+    </header>
+
+    <div class="container my-5" id="noi-dung">
         <div class="row">
             <div class="col-lg-8">
-                <h3 class="text-success">Giới thiệu chung</h3>
-                <p>
-                    Người Dao (với các nhóm chính như Dao Quần Chẹt, Dao Lô Gang, Dao Tiền, Dao Tam Đảo...) là những cư dân yêu thích sự khoáng đạt của núi rừng.
-                    Tại Thái Nguyên, họ thường chọn định cư ở lưng chừng các sườn núi cao hoặc thung lũng sâu tại các huyện Võ Nhai, Đại Từ, Đồng Hỷ.
-                    Cuộc sống gắn liền với mây ngàn gió núi đã hun đúc nên một nền văn hóa Dao đầy màu sắc, đóng góp những gam màu nóng ấm vào bức tranh văn hóa chung của tỉnh.
+                <h3 class="primary-text font-bold text-2xl mb-4">Giới thiệu chung</h3>
+                <p class="mb-4">
+                    Người Dao là những cư dân yêu thích sự khoáng đạt của núi rừng. Tại Thái Nguyên, họ thường chọn định cư ở lưng chừng các sườn núi cao.
                 </p>
 
-                <h3 class="text-success mt-4">Bậc thầy của tri thức thảo dược</h3>
-                <p>
-                    Người Dao không chỉ giỏi canh tác lúa nương trên những thửa ruộng bậc thang dốc đứng, mà họ còn nắm giữ kho tàng tri thức khổng lồ về Y học dân gian.
-                    Từ bao đời nay, họ đã biết vào rừng sâu tìm kiếm cây thuốc quý. 
-                    Bài <strong>"Thuốc tắm người Dao"</strong> trứ danh với sự kết hợp của hàng chục loại lá cây rừng là minh chứng cho sự am hiểu tường tận về thực vật học của họ, giúp du khách xua tan mọi mệt mỏi.
+                <h3 class="primary-text font-bold text-2xl mt-4 mb-4">Bậc thầy của tri thức thảo dược</h3>
+                <p class="mb-4">
+                    Người Dao nắm giữ kho tàng tri thức khổng lồ về Y học dân gian. Bài <strong>"Thuốc tắm người Dao"</strong> trứ danh là minh chứng rõ nét.
                 </p>
 
-                <h3 class="text-success mt-4">Trang phục: Tác phẩm nghệ thuật thêu tay</h3>
-                <p>
-                    Trang phục của phụ nữ Dao là những tác phẩm nghệ thuật cầu kỳ, rực rỡ nhất trong các phiên chợ vùng cao:
-                </p>
-                <ul>
-                    <li><strong>Dao Quần Chẹt:</strong> Phụ nữ mặc quần ống hẹp, đầu đội khăn dài, trang phục chủ yếu màu chàm điểm xuyết hoa văn thêu chỉ đỏ, vàng ở gấu áo, yếm.</li>
-                    <li><strong>Dao Lô Gang:</strong> Nổi bật với họa tiết hình ngôi sao 8 cánh, hình cây thông, quả trám thêu tay tỉ mỉ bằng chỉ màu sặc sỡ trên nền vải đen.</li>
-                    <li><strong>Dao Tiền:</strong> Đặc biệt với kỹ thuật in hoa văn bằng sáp ong và những đồng bạc trắng đính trên cổ áo.</li>
-                </ul>
-
-                <h3 class="text-success mt-4">Không gian sống và Tín ngưỡng</h3>
-                <p>
-                    Người Dao cư trú trong ba loại nhà chính: nhà sàn, nhà đất và nhà nửa sàn nửa đất để thích nghi với độ dốc của núi. 
-                    Trong mỗi ngôi nhà, bàn thờ tổ tiên và <strong>Bàn Vương</strong> (Thủy tổ của người Dao) luôn được đặt ở vị trí trang trọng nhất.
-                    Họ còn lưu giữ hệ thống chữ viết riêng (chữ Nôm Dao) trong những cuốn sách cổ bằng giấy dó.
-                </p>
-
-                <h3 class="text-success mt-4">Nghi lễ trưởng thành: Lễ Cấp Sắc</h3>
-                <p>
-                    Nét văn hóa tâm linh đặc sắc và quan trọng nhất là <strong>Lễ Cấp Sắc</strong> (Quá Tăng). Đây là nghi lễ đánh dấu sự trưởng thành của người đàn ông Dao.
-                    Theo quan niệm, người đàn ông phải trải qua lễ này mới được coi là người lớn, được tham gia việc hệ trọng của làng bản.
-                    Lễ diễn ra với nhiều nghi thức huyền bí, tiếng kèn, tiếng trống rộn ràng, giáo dục con người hướng tới cái Thiện và sống có trách nhiệm.
+                <h3 class="primary-text font-bold text-2xl mt-4 mb-4">Nghi lễ trưởng thành: Lễ Cấp Sắc</h3>
+                <p class="mb-4">
+                    Nét văn hóa tâm linh đặc sắc và quan trọng nhất là <strong>Lễ Cấp Sắc</strong>. Đây là nghi lễ đánh dấu sự trưởng thành của người đàn ông Dao.
                 </p>
             </div>
 
             <div class="col-lg-4">
                 <div class="sticky-top" style="top: 100px;">
                     <img src="https://placehold.co/400x500?text=Trang+Phuc+Nguoi+Dao" class="img-fluid rounded shadow mb-3" alt="Phụ nữ dân tộc Dao">
-                    <p class="text-muted small text-center">Trang phục rực rỡ của phụ nữ Dao trong dịp lễ hội.</p>
+                    <p class="text-muted small text-center">Trang phục rực rỡ của phụ nữ Dao.</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- NAVIGATION BOTTOM -->
+    <section class="ethnic-navigation text-center">
+        <div class="container">
+            <h4 class="mb-4 primary-text">Khám phá tiếp</h4>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="dan-toc-san-chay.html" class="ethnic-nav-btn"><i class="fas fa-arrow-left me-2"></i> Dân tộc Sán Chay</a>
+                <a href="index.html" class="ethnic-nav-btn"><i class="fas fa-home me-2"></i> Trang chủ</a>
+                <a href="dan-toc-hmong.html" class="ethnic-nav-btn">Dân tộc H'Mông <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container text-center py-4">
@@ -95,7 +96,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-    </nav>
-
-    <div class="container my-5">
-
