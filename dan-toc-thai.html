@@ -2,298 +2,85 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Người Thái - Vũ Điệu Xòe Hoa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            background-color: #FAFAFA;
-        }
-        h1, h2, h3, h4 {
-            font-family: 'Merriweather', serif;
-        }
-        .primary-bg {
-            background-color: #6A1B9A; /* Màu tím đậm (Tím hoa ban/Thổ cẩm) */
-        }
-        .primary-text {
-            color: #6A1B9A;
-        }
-        .secondary-bg {
-            background-color: #E1BEE7; /* Màu tím nhạt */
-        }
-        .text-accent {
-            color: #C2185B; /* Màu hồng đậm (Khăn Piêu) */
-        }
-        .section-padding {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
-        .image-card {
-            transition: transform 0.3s ease-in-out;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        .image-card:hover {
-            transform: translateY(-5px);
-        }
-        /* Hiệu ứng hoa văn quả trám (Khăn Piêu) */
-        .pattern-bg {
-            background-image: linear-gradient(135deg, #6A1B9A 25%, transparent 25%), linear-gradient(225deg, #6A1B9A 25%, transparent 25%), linear-gradient(45deg, #6A1B9A 25%, transparent 25%), linear-gradient(315deg, #6A1B9A 25%, transparent 25%);
-            background-position: 10px 0, 10px 0, 0 0, 0 0;
-            background-size: 20px 20px;
-            background-repeat: repeat;
-            opacity: 0.03;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/ethnic.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="ethnic-page ethnic-thai"> <!-- CLASS ethnic-thai -->
 
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-2xl font-bold primary-text uppercase">VĂN HÓA THÁI</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#gioi-thieu" class="text-gray-600 hover:text-purple-800 transition">Giới thiệu</a>
-                    <a href="#kinh-te" class="text-gray-600 hover:text-purple-800 transition">Thủy lợi</a>
-                    <a href="#kien-truc" class="text-gray-600 hover:text-purple-800 transition">Nhà sàn</a>
-                    <a href="#trang-phuc" class="text-gray-600 hover:text-purple-800 transition">Khăn Piêu</a>
-                    <a href="#van-hoa" class="text-gray-600 hover:text-purple-800 transition">Múa Xòe</a>
-                    <a href="#am-thuc" class="text-gray-600 hover:text-purple-800 transition">Ẩm thực</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🌿 THÁI NGUYÊN CULTURE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gioi-thieu.html">Giới thiệu</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Các dân tộc</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dan-toc-tay.html">Dân tộc Tày</a></li>
+                            <!-- ... -->
+                            <li><a class="dropdown-item" href="dan-toc-thai.html">Dân tộc Thái</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html">Liên hệ</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="gioi-thieu" class="relative h-screen flex items-center justify-center primary-bg text-white overflow-hidden">
-        <div class="absolute inset-0 z-0 opacity-50">
-            <!-- Ảnh nền múa xòe hoa hoặc cảnh Tây Bắc -->
-                    </div>
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight hover:scale-105 transition-transform duration-300 inline-block cursor-default">NGƯỜI THÁI</h1>
-            <br>
-            <h2 class="text-xl md:text-3xl font-light mb-8 text-purple-100 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Vũ điệu Xòe hoa & Sắc màu Khăn Piêu</h2>
-            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
-                Cộng đồng văn hóa rực rỡ với hai nhóm Thái Đen và Thái Trắng. Nổi tiếng với kỹ thuật canh tác lúa nước bậc thầy và sự duyên dáng trong từng điệu Xòe.
-            </p>
-            <a href="#kinh-te" class="inline-block bg-white text-purple-900 px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition shadow-lg border border-purple-200">Khám Phá Vẻ Đẹp</a>
+    <header class="ethnic-hero">
+        <img src="https://images.unsplash.com/photo-1596395819057-a37aace88080?q=80&w=2072&auto=format&fit=crop" class="ethnic-hero-overlay" alt="Tây Bắc">
+        <div class="ethnic-hero-content">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">NGƯỜI THÁI</h1>
+            <h2 class="text-xl md:text-3xl font-light mb-8">Vũ điệu Xòe hoa & Sắc màu Khăn Piêu</h2>
+            <a href="#kinh-te" class="ethnic-hero-btn">Khám Phá Vẻ Đẹp</a>
         </div>
     </header>
 
-    <!-- Section: Kinh tế (Thủy lợi) -->
     <section id="kinh-te" class="section-padding bg-white relative">
-        <div class="absolute inset-0 pattern-bg"></div>
+        <div class="pattern-bg"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
-                                        <div class="mt-4 grid grid-cols-2 gap-4">
-                                                <div class="bg-purple-50 rounded-lg flex items-center justify-center p-4 text-center border border-purple-200">
-                             <span class="font-serif italic text-purple-900">"Mương - Phai - Lái - Lin"</span>
-                        </div>
+                    <div class="bg-purple-50 rounded-lg flex items-center justify-center p-4 text-center border border-purple-200 shadow">
+                         <span class="font-serif italic text-purple-900">"Mương - Phai - Lái - Lin"</span>
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
                     <h3 class="text-accent font-bold uppercase tracking-wide mb-2">Kỹ sư nông nghiệp tài ba</h3>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Bậc thầy thủy lợi</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text">Bậc thầy thủy lợi</h2>
                     <p class="text-gray-600 mb-4 leading-relaxed">
-                        Người Thái được mệnh danh là những kỹ sư nông nghiệp tài ba nhất miền núi. Câu tục ngữ <em>"Mương - Phai - Lái - Lin"</em> đã tóm tắt hệ thống thủy lợi hoàn chỉnh: đào mương, đắp phai (đập), làm lái (kè), đặt lin (máng).
+                        Người Thái được mệnh danh là những kỹ sư nông nghiệp tài ba nhất miền núi với hệ thống thủy lợi hoàn chỉnh: Mương - Phai - Lái - Lin.
                     </p>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Nhờ đó, họ canh tác lúa nước năng suất cao trên các cánh đồng thung lũng (ruộng Mường). Bên cạnh đó, nghề dệt thổ cẩm cũng cực kỳ phát triển, tạo ra những tấm vải hoa văn tinh xảo.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-gray-700"><i class="fas fa-water text-blue-500 mr-2"></i> Hệ thống thủy lợi Mương - Phai - Lái - Lin</li>
-                        <li class="flex items-center text-gray-700"><i class="fas fa-seedling text-green-600 mr-2"></i> Canh tác lúa nước thung lũng</li>
-                        <li class="flex items-center text-gray-700"><i class="fas fa-cut text-pink-500 mr-2"></i> Nghề dệt thổ cẩm truyền thống</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Kiến trúc (Nhà sàn) -->
-    <section id="kien-truc" class="section-padding bg-purple-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Nhà sàn Khau Cút</h2>
-                <div class="w-24 h-1 bg-purple-400 mx-auto rounded"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Kiến trúc nhà sàn cao ráo, sạch sẽ - một tác phẩm nghệ thuật giữa núi rừng.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-purple-600">
-                    <h3 class="text-2xl font-bold mb-4 flex items-center text-purple-800"><i class="fas fa-home mr-3"></i> Người Thái Đen</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        Nổi bật với mái nhà hình mai rùa (khum khum). Đặc biệt là biểu tượng <strong>"Khau cút"</strong> (cặp sừng trâu cách điệu) trên nóc nhà - vật linh thiêng chắn gió bão và nhận diện gia thế.
-                    </p>
-                                    </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-pink-500">
-                    <h3 class="text-2xl font-bold mb-4 flex items-center text-pink-700"><i class="fas fa-home mr-3"></i> Người Thái Trắng</h3>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        Nhà sàn thường có lan can phía trước, các chi tiết trang trí thoáng đạt, thể hiện sự tinh tế và cởi mở trong không gian sống.
-                    </p>
-                                    </div>
+    <!-- NAVIGATION BOTTOM -->
+    <section class="ethnic-navigation text-center">
+        <div class="container">
+            <h4 class="mb-4 primary-text">Khám phá tiếp</h4>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="dan-toc-ngai.html" class="ethnic-nav-btn"><i class="fas fa-arrow-left me-2"></i> Dân tộc Ngái</a>
+                <a href="index.html" class="ethnic-nav-btn"><i class="fas fa-home me-2"></i> Trang chủ</a>
+                <a href="dan-toc-tay.html" class="ethnic-nav-btn">Dân tộc Tày <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Section: Trang phục -->
-    <section id="trang-phuc" class="section-padding primary-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Trang phục <br><span class="text-xl font-normal italic text-pink-300">Đỉnh cao của sự duyên dáng</span></h2>
-                    <p class="text-purple-100 text-lg mb-6 leading-relaxed">
-                        Trang phục phụ nữ Thái được đánh giá là tôn vinh vẻ đẹp hình thể tốt nhất. Từng đường kim mũi chỉ đều gửi gắm tâm tư tình cảm.
-                    </p>
-                    <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-20">
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <span class="bg-white text-purple-900 rounded-full h-8 w-8 flex items-center justify-center mr-3 mt-1"><i class="fas fa-female"></i></span>
-                                <div>
-                                    <strong class="text-pink-300">Áo Cóm & Váy dài:</strong>
-                                    <p class="text-sm opacity-90">Áo bó sát tôn eo thon với hàng khuy bướm bạc lấp lánh. Váy đen dài chấm gót buông rủ mềm mại.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="bg-white text-purple-900 rounded-full h-8 w-8 flex items-center justify-center mr-3 mt-1"><i class="fas fa-scarf"></i></span>
-                                <div>
-                                    <strong class="text-pink-300">Khăn Piêu (Thái Đen):</strong>
-                                    <p class="text-sm opacity-90">Điểm nhấn quan trọng nhất. Thêu tay cầu kỳ nhiều tháng trời với các hình khối (quả trám) rực rỡ sắc màu.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="space-y-4 mt-8">
-                                             </div>
-                    <div class="space-y-4">
-                        <div class="bg-pink-700 h-40 rounded-lg flex items-center justify-center p-4 text-center border border-pink-500">
-                             <span class="italic font-serif text-white">"Nụ cười rạng rỡ như hoa Ban"</span>
-                        </div>
-                                            </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Văn hóa (Múa Xòe) -->
-    <section id="van-hoa" class="section-padding bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="bg-pink-100 text-pink-800 px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase">Di sản văn hóa phi vật thể UNESCO</span>
-                <br>
-                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">"Không Xòe không vui"</h2>
-                <p class="max-w-3xl mx-auto text-gray-600 text-lg">
-                    Tiếng trống chiêng vang lên, mọi người nắm tay nhau thành vòng tròn lớn. Điệu Xòe biểu tượng cho sự đoàn kết, cởi mở và lòng hiếu khách.
-                </p>
-            </div>
-
-            <div class="flex flex-col lg:flex-row gap-10 items-stretch">
-                <!-- Image Card -->
-                <div class="lg:w-1/2 relative group overflow-hidden rounded-2xl shadow-xl">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900 via-transparent to-transparent opacity-60"></div>
-                    <div class="absolute bottom-0 left-0 p-8 text-white">
-                        <h3 class="text-2xl font-bold mb-2">Nghệ thuật Xòe Thái</h3>
-                        <p class="text-purple-200">Biểu tượng của tình đoàn kết cộng đồng.</p>
-                    </div>
-                </div>
-                
-                <!-- Content Right -->
-                <div class="lg:w-1/2 flex flex-col justify-center space-y-6">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 bg-purple-100 rounded-full p-4 mr-4">
-                            <i class="fas fa-users text-purple-600 text-2xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold mb-2 primary-text">Vòng tròn kết nối</h4>
-                            <p class="text-gray-600">Trong lễ hội, không phân biệt già trẻ, gái trai, tất cả cùng hòa nhịp bước chân.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 bg-purple-100 rounded-full p-4 mr-4">
-                            <i class="fas fa-music text-purple-600 text-2xl"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold mb-2 primary-text">Múa Sạp rộn ràng</h4>
-                            <p class="text-gray-600">Bên cạnh Xòe, điệu múa Sạp với tiếng gõ nhịp tre vui tươi cũng là nét đặc sắc không thể thiếu.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Ẩm thực -->
-    <section id="am-thuc" class="section-padding bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Hương vị Tây Bắc giữa lòng Thái Nguyên</h2>
-                    <p class="text-gray-700 mb-6 text-lg">
-                        Ẩm thực người Thái nổi tiếng cầu kỳ trong tẩm ướp gia vị, đặc biệt là <strong>hạt mắc khén</strong> (tiêu rừng) tạo nên hương thơm đặc trưng.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-gray-800">
-                            <h4 class="font-bold text-lg"><i class="fas fa-fish mr-2"></i> Pa pỉnh tộp (Cá nướng)</h4>
-                            <p class="text-gray-600 text-sm">Cá suối tẩm mắc khén, sả, ớt, gập đôi nướng trên than hồng. Thịt ngọt đậm đà, thơm lừng.</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-sm border-l-4 border-green-600">
-                            <h4 class="font-bold text-lg"><i class="fas fa-utensils mr-2"></i> Cơm lam & Xôi nếp</h4>
-                            <p class="text-gray-600 text-sm">Dẻo thơm, thường được đựng trong các "ép khẩu" (giỏ đan bằng tre) xinh xắn.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                                                          </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl font-bold mb-4 font-serif">Văn Hóa Người Thái Thái Nguyên</h2>
-            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Vẻ đẹp rực rỡ, lâu đời và những điệu Xòe say đắm lòng người.</p>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-sm text-gray-500">
-                &copy; 2024 Bản quyền nội dung thuộc về bài viết "Người Thái - Vũ Điệu Xòe Hoa".
-            </div>
+    <footer>
+        <div class="container text-center py-4">
+            <p>Dự án STEM © 2025</p>
         </div>
     </footer>
-
-    <!-- Smooth Scroll Script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
