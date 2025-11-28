@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Người Kinh (Việt) - Bản Sắc Truyền Thống</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #fdfbf7; /* Màu kem nhạt */
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+        .primary-bg {
+            background-color: #922B21; /* Màu đỏ gạch/ngói đậm */
+        }
+        .primary-text {
+            color: #922B21;
+        }
+        .text-accent {
+            color: #D68910; /* Màu vàng lúa chín */
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .image-card {
+            transition: transform 0.3s ease-in-out;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Hiệu ứng hoa văn gạch ngói/trống đồng nhẹ */
+        .pattern-bg {
+            background-image: radial-gradient(#922B21 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold primary-text">VĂN HÓA NGƯỜI VIỆT</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#gioi-thieu" class="text-gray-600 hover:text-red-800 transition">Giới thiệu</a>
+                    <a href="#kinh-te" class="text-gray-600 hover:text-red-800 transition">Kinh tế</a>
+                    <a href="#khong-gian-song" class="text-gray-600 hover:text-red-800 transition">Không gian sống</a>
+                    <a href="#am-thuc" class="text-gray-600 hover:text-red-800 transition">Ẩm thực</a>
+                    <a href="#trang-phuc" class="text-gray-600 hover:text-red-800 transition">Trang phục</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="gioi-thieu" class="relative h-screen flex items-center justify-center primary-bg text-white overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <!-- Ảnh nền làng quê Việt Nam -->
+            <img src="https://images.unsplash.com/photo-1558617719-7589f898393b?q=80&w=2070&auto=format&fit=crop" alt="Làng quê Việt Nam" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight hover:scale-105 transition-transform duration-300 inline-block cursor-default">NGƯỜI KINH (VIỆT)</h1>
+            <br>
+            <h2 class="text-xl md:text-3xl font-light mb-8 text-yellow-100 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Sự hội tụ & Lan tỏa bản sắc truyền thống</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
+                Mang theo tinh hoa văn hóa sông Hồng lên vùng trung du Thái Nguyên, tạo nên diện mạo sầm uất cho vùng đất "Thủ đô gió ngàn".
+            </p>
+            <a href="#kinh-te" class="inline-block bg-white primary-text px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition shadow-lg">Khám Phá Văn Hóa</a>
+        </div>
+    </header>
+
+    <!-- Section: Kinh Tế -->
+    <section id="kinh-te" class="section-padding bg-white relative">
+        <div class="absolute inset-0 pattern-bg"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                                        <div class="mt-4 grid grid-cols-2 gap-4">
+                                                 <div class="bg-yellow-50 rounded-lg flex items-center justify-center p-4 text-center border border-yellow-200">
+                             <span class="font-serif italic text-yellow-800">"Bờ xôi ruộng mật"</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-accent font-bold uppercase tracking-wide mb-2">Hoạt động kinh tế</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Từ lúa nước đến đồi chè</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Người Kinh là cư dân nông nghiệp với trình độ thâm canh lúa nước đỉnh cao. Họ đã biến những vùng đất ven sông Công, sông Cầu thành những cánh đồng màu mỡ nhờ kỹ thuật đắp đê và thủy lợi tài tình.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Tại Thái Nguyên, người Kinh đã kết hợp kinh nghiệm canh tác với thổ nhưỡng bản địa để phát triển <strong>cây Chè</strong>. Đặc biệt là kỹ thuật sao chè thủ công tại Tân Cương, Đại Từ, đưa hương vị chè Thái Nguyên vươn tầm thế giới.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-yellow-600 mr-2"></i> Kỹ thuật thâm canh lúa nước & thủy lợi</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-yellow-600 mr-2"></i> Nghệ thuật sao chè thủ công trứ danh</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-yellow-600 mr-2"></i> Phát triển thương mại & khu công nghiệp</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Không gian sống -->
+    <section id="khong-gian-song" class="section-padding bg-orange-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Văn hóa Làng xã & Mái ngói đỏ</h2>
+                <div class="w-24 h-1 bg-red-800 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Hình ảnh cây đa, bến nước, sân đình đã ăn sâu vào tâm thức người Việt.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-red-800">
+                    <div class="text-4xl text-red-800 mb-4"><i class="fas fa-home"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Nhà đất 3 gian</h3>
+                    <p class="text-gray-600">Khác với nhà sàn, người Kinh ở nhà trệt xây gạch, lợp ngói đỏ hoặc lá tranh, hướng tới sự hài hòa với tự nhiên.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-yellow-600">
+                    <div class="text-4xl text-yellow-600 mb-4"><i class="fas fa-tree"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Vườn rau Ao cá</h3>
+                    <p class="text-gray-600">Trước nhà thường có sân gạch rộng để phơi phóng, xung quanh là vườn tược xanh mát và ao cá, tạo nên hệ sinh thái khép kín.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-gray-700">
+                    <div class="text-4xl text-gray-700 mb-4"><i class="fas fa-users"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Tình làng nghĩa xóm</h3>
+                    <p class="text-gray-600">Tinh thần "tối lửa tắt đèn có nhau" và văn hóa cộng đồng làng xã vẫn luôn được gìn giữ dù đô thị hóa phát triển.</p>
+                </div>
+            </div>
+            
+             <div class="mt-12 rounded-xl overflow-hidden shadow-2xl relative h-80">
+                                 <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4 w-full">
+                    <p class="italic text-center">"Cổng làng uy nghiêm - Biểu tượng của văn hóa làng xã"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Ẩm thực -->
+    <section id="am-thuc" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Ẩm thực Tinh tế & Hài hòa</h2>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        Ẩm thực người Kinh chú trọng sự cân bằng âm dương và hương vị. Cơm tẻ và bát nước mắm là "quốc hồn quốc túy" không thể thiếu.
+                    </p>
+                    <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-lg mb-6">
+                        <h4 class="font-bold text-green-800 text-xl mb-2">Đặc sản: Bánh chưng Bờ Đậu</h4>
+                        <p class="text-gray-700">
+                            Tại Phú Lương (Thái Nguyên), làng nghề Bờ Đậu nổi tiếng với món bánh chưng gói bằng <strong>lá dong rừng, gạo nếp nương</strong>. Điểm độc đáo là không dùng khuôn mà bánh vẫn vuông vức, sắc cạnh, dẻo thơm nức tiếng gần xa.
+                        </p>
+                    </div>
+                    <p class="text-gray-600 italic">"Mâm cỗ ngày Tết là tác phẩm nghệ thuật với bánh chưng xanh, dưa hành, thịt mỡ..."</p>
+                </div>
+                <div class="grid grid-rows-2 gap-4 h-full">
+                                        <div class="grid grid-cols-2 gap-4">
+                                                                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Trang phục (Áo Dài) -->
+    <section id="trang-phuc" class="section-padding primary-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <span class="text-yellow-300 font-bold tracking-widest uppercase mb-2 block">Biểu tượng văn hóa</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Vẻ đẹp Áo Dài <br>& Nón Lá</h2>
+                    <p class="text-gray-100 text-lg mb-6 leading-relaxed">
+                        Trang phục truyền thống mang nét đẹp kín đáo, nhã nhặn. Từ áo tứ thân, khăn mỏ quạ xưa kia đến tà Áo Dài thướt tha ngày nay.
+                    </p>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="flex items-start bg-white bg-opacity-10 p-4 rounded-lg">
+                            <div class="bg-white text-red-800 rounded-full p-2 mr-4 mt-1"><i class="fas fa-history"></i></div>
+                            <div>
+                                <h4 class="font-bold text-yellow-200">Xưa kia</h4>
+                                <p class="text-sm opacity-90">Nam mặc quần lá tọa, áo nâu. Nữ mặc váy đen, yếm thắm, áo tứ thân, chít khăn mỏ quạ.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-white bg-opacity-10 p-4 rounded-lg">
+                            <div class="bg-white text-red-800 rounded-full p-2 mr-4 mt-1"><i class="fas fa-female"></i></div>
+                            <div>
+                                <h4 class="font-bold text-yellow-200">Ngày nay</h4>
+                                <p class="text-sm opacity-90">Áo dài xẻ tà, ôm sát tôn nét duyên dáng. Hình ảnh nữ sinh trong tà áo dài trắng hay các bà các mẹ trong áo dài hoa văn luôn là điểm nhấn lễ hội.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                     <div class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-400 rounded-full opacity-20 blur-xl"></div>
+                     <div class="rounded-t-full overflow-hidden border-4 border-yellow-500 border-opacity-30 shadow-2xl mx-auto w-3/4 md:w-full">
+                                              </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold mb-4 font-serif">Người Kinh (Việt) Thái Nguyên</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Chung sống và giao hòa, cùng kiến tạo nên bản sắc văn hóa đa dạng của vùng đất Thái Nguyên.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-sm text-gray-500">
+                &copy; 2024 Bản quyền nội dung thuộc về bài viết "Người Kinh (Việt) - Sự Hội Tụ Và Lan Tỏa".
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

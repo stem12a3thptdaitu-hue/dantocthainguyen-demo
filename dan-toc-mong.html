@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Người Mông - Kiêu Hãnh Trên Đỉnh Núi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #F3F4F6;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+        .primary-bg {
+            background-color: #374151; /* Màu xám đá đậm */
+        }
+        .primary-text {
+            color: #374151;
+        }
+        .secondary-bg {
+            background-color: #E11D48; /* Màu đỏ thổ cẩm */
+        }
+        .text-accent {
+            color: #D97706; /* Màu vàng cam của ngô/nắng */
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .image-card {
+            transition: transform 0.3s ease-in-out;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Hiệu ứng vân đá/núi */
+        .pattern-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 17l-7-7h14l-7 7z' fill='%23374151' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold primary-text uppercase">Văn Hóa Người Mông</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#gioi-thieu" class="text-gray-600 hover:text-rose-600 transition">Giới thiệu</a>
+                    <a href="#nong-nghiep" class="text-gray-600 hover:text-rose-600 transition">Canh tác đá</a>
+                    <a href="#trang-phuc" class="text-gray-600 hover:text-rose-600 transition">Thổ cẩm</a>
+                    <a href="#kien-truc" class="text-gray-600 hover:text-rose-600 transition">Nhà & Rào đá</a>
+                    <a href="#van-hoa" class="text-gray-600 hover:text-rose-600 transition">Tiếng Khèn</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="gioi-thieu" class="relative h-screen flex items-center justify-center primary-bg text-white overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-50">
+            <!-- Ảnh nền đỉnh núi đá vôi xanh ngát mờ sương (Phù hợp cảnh quan Võ Nhai/Đồng Hỷ) -->
+            <img src="image_36e7d7.jpg" alt="Người Mông Thái Nguyên" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight hover:scale-105 transition-transform duration-300 inline-block cursor-default">NGƯỜI MÔNG</h1>
+            <br>
+            <h2 class="text-xl md:text-3xl font-light mb-8 text-gray-200 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Kiêu hãnh trên những đỉnh núi mờ sương</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
+                Những "đứa con của mây ngàn", sống kiên cường nơi non cao khắc nghiệt, sở hữu nền văn hóa rực rỡ như những đóa hoa rừng.
+            </p>
+            <a href="#nong-nghiep" class="inline-block bg-rose-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-rose-700 transition shadow-lg">Khám Phá Cao Nguyên</a>
+        </div>
+    </header>
+
+    <!-- Section: Nông nghiệp (Thổ canh hốc đá) -->
+    <section id="nong-nghiep" class="section-padding bg-white relative">
+        <div class="absolute inset-0 pattern-bg"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1589553026365-d0c8d1544464?q=80&w=2070&auto=format&fit=crop" alt="Canh tác trên núi đá" class="w-full h-80 object-cover rounded-lg shadow-xl mb-4 image-card">
+                    <div class="mt-4 grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1634467524884-897d0af5e104?q=80&w=2070&auto=format&fit=crop" alt="Ngô (Mèn mén)" class="rounded-lg shadow-md h-32 w-full object-cover">
+                        <div class="bg-gray-100 rounded-lg flex items-center justify-center p-4 text-center border border-gray-300">
+                             <span class="font-serif italic text-gray-700">"Sống trên đá, chết vùi trong đá"</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-accent font-bold uppercase tracking-wide mb-2">Sức sống mãnh liệt</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Kỹ thuật "Thổ canh hốc đá"</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Tại những nơi đá nhiều hơn đất, người Mông gùi từng gùi đất đổ vào hốc đá để trồng ngô. Cây ngô bám vào đá mà vươn lên, trở thành nguồn sống chủ đạo nuôi dưỡng bao thế hệ.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Từ hạt ngô, họ chế biến thành món <strong>Mèn mén</strong> (bột ngô hấp) - món ăn quốc hồn quốc túy giúp người Mông dẻo dai như cây samu giữa trời.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-700"><i class="fas fa-mountain text-gray-500 mr-2"></i> Canh tác trên sườn núi dốc đứng</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-seedling text-green-500 mr-2"></i> Trồng ngô trong hốc đá</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-utensils text-amber-500 mr-2"></i> Ẩm thực đặc trưng: Mèn mén</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Trang phục -->
+    <section id="trang-phuc" class="section-padding bg-rose-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-rose-800 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Rực rỡ sắc màu <br><span class="text-xl font-normal italic text-gray-600">Tuyệt tác thổ cẩm</span></h2>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        Trang phục phụ nữ Mông là những tác phẩm nghệ thuật cầu kỳ bậc nhất. <em>"Gái đẹp không biết làm lanh cũng xấu"</em> - câu nói khẳng định vị trí của nghề dệt vải lanh.
+                    </p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-rose-600">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-rose-600 mr-3 mt-1"><i class="fas fa-tshirt"></i></span>
+                                <span><strong>Chất liệu:</strong> Vải lanh dệt thủ công, sợi dai và bền.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-rose-600 mr-3 mt-1"><i class="fas fa-palette"></i></span>
+                                <span><strong>Họa tiết:</strong> Vẽ sáp ong, thêu thùa hoa văn hình học, xoắn ốc với gam màu nóng (đỏ, cam, vàng).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-rose-600 mr-3 mt-1"><i class="fas fa-female"></i></span>
+                                <span><strong>Váy xòe:</strong> Khi bước đi, chiếc váy dập dìu như những cánh bướm mùa xuân.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="space-y-4 pt-8">
+                        <img src="https://images.unsplash.com/photo-1598463953760-4886657e3c98?q=80&w=2000" alt="Hoa văn thổ cẩm" class="rounded-lg shadow-md h-48 w-full object-cover">
+                         <div class="bg-rose-900 h-32 rounded-lg flex items-center justify-center p-4 text-center text-white">
+                            <span class="italic font-serif">"Cánh bướm mùa xuân"</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                         <div class="bg-amber-600 h-32 rounded-lg flex items-center justify-center p-4 text-center text-white">
+                             <span class="italic font-serif">"Vẽ sáp ong tinh xảo"</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1529983942001-46f9910d57e3?q=80&w=2000" alt="Phụ nữ dân tộc" class="rounded-lg shadow-md h-48 w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Kiến trúc (Nhà & Hàng rào đá) -->
+    <section id="kien-truc" class="section-padding bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Kiến trúc Phong trần & Cổ kính</h2>
+                <div class="w-24 h-1 bg-gray-500 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Nơi trú ẩn vững chãi giữa thiên nhiên khắc nghiệt.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gray-600 rounded-full opacity-50 blur-xl"></div>
+                    <h3 class="text-2xl font-bold mb-4 flex items-center"><i class="fas fa-home mr-3 text-amber-500"></i> Nhà Trình Tường</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Nhà trệt lợp gỗ pơ-mu hoặc ngói âm dương. Vách thưng ván gỗ hoặc trình tường dày dặn để chống lại cái lạnh thấu xương của vùng cao.
+                    </p>
+                    <img src="https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?q=80&w=2069&auto=format&fit=crop" alt="Nhà trình tường mái ngói" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+                
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gray-600 rounded-full opacity-50 blur-xl"></div>
+                    <h3 class="text-2xl font-bold mb-4 flex items-center"><i class="fas fa-cubes mr-3 text-amber-500"></i> Hàng Rào Đá</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Tuyệt tác của sự khéo léo: những viên đá núi ngổn ngang được xếp chồng lên nhau khít khao không cần chất kết dính. Vừa ngăn thú dữ, vừa tạo vẻ đẹp cổ kính.
+                    </p>
+                    <img src="https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?q=80&w=2070&auto=format&fit=crop" alt="Hàng rào đá" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Văn hóa (Tiếng Khèn) -->
+    <section id="van-hoa" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-10 items-center">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-orange-100 rounded-full opacity-60 blur-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1565342403875-07a8dc5ed13c?q=80&w=2000" alt="Chàng trai Mông thổi khèn" class="relative z-10 rounded-2xl shadow-2xl w-full object-cover h-96">
+                    <p class="text-center mt-4 text-gray-500 italic">"Tiếng Khèn gọi bạn tình trong đêm xuân"</p>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <span class="text-rose-600 font-bold tracking-widest uppercase mb-2 block">Linh hồn văn hóa</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 primary-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Hồn thiêng tiếng Khèn</h2>
+                    <p class="text-gray-600 text-lg mb-6">
+                        Cây Khèn Mông vừa là nhạc cụ, vừa là đạo cụ múa, gắn liền với người đàn ông suốt cuộc đời.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 rounded-full p-3 mr-4 text-rose-600"><i class="fas fa-heart"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Khúc hát giao duyên</h4>
+                                <p class="text-gray-600">Thể hiện sự tài hoa, sức mạnh của chàng trai để chinh phục người mình yêu.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 rounded-full p-3 mr-4 text-rose-600"><i class="fas fa-praying-hands"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Cầu nối tâm linh</h4>
+                                <p class="text-gray-600">Trong nghi lễ tang ma, tiếng khèn đưa đường chỉ lối cho linh hồn về với tổ tiên.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 rounded-full p-3 mr-4 text-rose-600"><i class="fas fa-gamepad"></i></div>
+                            <div>
+                                <h4 class="font-bold text-lg">Hội Gầu Tào</h4>
+                                <p class="text-gray-600">Lễ hội cầu phúc dịp Tết với tiếng khèn, tiếng sáo và các trò chơi dân gian (đánh quay, ném pao).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold mb-4 font-serif">Văn Hóa Người Mông Thái Nguyên</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Mạnh mẽ, phóng khoáng và rực rỡ sắc màu nơi non cao.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-sm text-gray-500">
+                &copy; 2024 Bản quyền nội dung thuộc về bài viết "Người Mông - Kiêu Hãnh Trên Những Đỉnh Núi".
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

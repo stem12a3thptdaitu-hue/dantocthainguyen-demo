@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Người Tày - Sắc Chàm Thủy Chung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+        }
+        .indigo-bg {
+            background-color: #2E4053; /* Màu chàm đậm */
+        }
+        .indigo-text {
+            color: #2E4053;
+        }
+        .text-accent {
+            color: #D35400; /* Màu cam đất nung làm điểm nhấn */
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .image-card {
+            transition: transform 0.3s ease-in-out;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Hiệu ứng hoa văn thổ cẩm nhẹ */
+        .pattern-bg {
+            background-image: radial-gradient(#2E4053 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold indigo-text">DI SẢN NGƯỜI TÀY</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#gioi-thieu" class="text-gray-600 hover:text-indigo-800 transition">Giới thiệu</a>
+                    <a href="#nong-nghiep" class="text-gray-600 hover:text-indigo-800 transition">Nông nghiệp</a>
+                    <a href="#kien-truc" class="text-gray-600 hover:text-indigo-800 transition">Nhà sàn</a>
+                    <a href="#trang-phuc" class="text-gray-600 hover:text-indigo-800 transition">Trang phục</a>
+                    <a href="#van-hoa" class="text-gray-600 hover:text-indigo-800 transition">Hát Then</a>
+                    <a href="#am-thuc" class="text-gray-600 hover:text-indigo-800 transition">Ẩm thực</a>
+                </div>
+                <!-- Mobile menu button (icon only) -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="gioi-thieu" class="relative h-screen flex items-center justify-center indigo-bg text-white overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <!-- Ảnh nền tượng trưng cho cảnh quan miền núi phía Bắc -->
+            <img src="https://images.unsplash.com/photo-1528127220108-1e58f2f5c120?q=80&w=2070&auto=format&fit=crop" alt="Phong cảnh miền núi phía Bắc" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight hover:scale-105 transition-transform duration-300 inline-block cursor-default">NGƯỜI TÀY</h1>
+            <br>
+            <h2 class="text-xl md:text-3xl font-light mb-8 text-gray-200 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Sắc Chàm Thủy Chung & Tiếng Đàn Tính Gọi Bạn</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-90">
+                "Người anh cả" trong đại gia đình các dân tộc tại Thái Nguyên. Từ ATK Định Hóa đến Đại Từ, đâu đâu cũng in đậm dấu ấn bàn tay lao động cần cù và tâm hồn đôn hậu.
+            </p>
+            <a href="#nong-nghiep" class="inline-block bg-white indigo-text px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition shadow-lg">Khám Phá Ngay</a>
+        </div>
+    </header>
+
+    <!-- Section: Bậc thầy lúa nước -->
+    <section id="nong-nghiep" class="section-padding bg-white relative">
+        <div class="absolute inset-0 pattern-bg"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                                        <div class="mt-4 grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1596395819057-a37aace88080?q=80&w=2072&auto=format&fit=crop" alt="Đồi chè Thái Nguyên" class="rounded-lg shadow-md h-40 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1591528659585-6110f80e9803?q=80&w=2070&auto=format&fit=crop" alt="Guồng nước" class="rounded-lg shadow-md h-40 w-full object-cover">
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="text-accent font-bold uppercase tracking-wide mb-2">Văn minh nông nghiệp</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 indigo-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Bậc thầy của văn minh lúa nước</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Người Tày là những cư dân nông nghiệp tài hoa bậc nhất vùng thung lũng. Họ sở hữu kỹ thuật thâm canh lúa nước điêu luyện và biết chọn những vùng đất màu mỡ ven sông suối để định cư.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Hệ thống thủy lợi với <strong>mương, phai, lái, lin</strong> và những chiếc <strong>cọn nước</strong> (guồng nước) khổng lồ là minh chứng cho trí tuệ chinh phục thiên nhiên. Bên cạnh đó, nghề trồng chè cũng góp phần làm nên thương hiệu "Đệ nhất danh trà" nức tiếng Thái Nguyên.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-green-500 mr-2"></i> Kỹ thuật thâm canh lúa nước</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-green-500 mr-2"></i> Hệ thống cọn nước độc đáo</li>
+                        <li class="flex items-center text-gray-700"><i class="fas fa-check text-green-500 mr-2"></i> Nghề trồng chè và đan lát</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Nhà sàn -->
+    <section id="kien-truc" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 indigo-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Nếp nhà sàn và Rừng cọ đồi chè</h2>
+                <div class="w-24 h-1 bg-gray-400 mx-auto rounded"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Không gian sống gắn liền với thiên nhiên, nơi bếp lửa hồng sưởi ấm những câu chuyện cổ tích.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-gray-600">
+                    <div class="text-4xl text-gray-600 mb-4"><i class="fas fa-home"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Kiến trúc độc đáo</h3>
+                    <p class="text-gray-600">Nhà thường có số gian lẻ (3, 5 hoặc 7). Sàn làm bằng gỗ hoặc tre vầu già đập dập, mang lại cảm giác vững chãi.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-green-600">
+                    <div class="text-4xl text-green-600 mb-4"><i class="fas fa-leaf"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Mái lá cọ</h3>
+                    <p class="text-gray-600">Đặc trưng vùng Định Hóa với mái lợp bằng lá cọ dày dặn, giúp ngôi nhà ấm áp vào mùa đông và mát mẻ vào mùa hè.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition border-t-4 border-red-500">
+                    <div class="text-4xl text-red-500 mb-4"><i class="fas fa-fire"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Bếp lửa linh hồn</h3>
+                    <p class="text-gray-600">Đặt chính giữa nhà, không chỉ để nấu nướng mà còn là nơi gắn kết các thành viên, nơi ông bà kể chuyện cho cháu nghe.</p>
+                </div>
+            </div>
+            
+             <div class="mt-12 rounded-xl overflow-hidden shadow-2xl">
+                             </div>
+             <p class="text-center mt-4 italic text-gray-500">Cầu thang 9 bậc tượng trưng cho sự may mắn và trường tồn.</p>
+        </div>
+    </section>
+
+    <!-- Section: Trang phục (Sắc Chàm) -->
+    <section id="trang-phuc" class="section-padding indigo-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Sắc Chàm <br><span class="text-xl font-normal italic">Vẻ đẹp của sự đằm thắm</span></h2>
+                    <p class="text-gray-200 text-lg mb-6 leading-relaxed">
+                        Nếu trang phục người Mông rực rỡ sắc màu, thì người Tày chinh phục ánh nhìn bởi sự giản dị, nền nã của màu Chàm (Indigo). Màu của đất đai, rừng núi, tượng trưng cho lòng thủy chung son sắt.
+                    </p>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-sm border border-white border-opacity-20">
+                        <h4 class="font-bold text-xl mb-3 border-b border-white border-opacity-30 pb-2">Nét đẹp phụ nữ Tày</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><i class="fas fa-star text-yellow-400 mt-1 mr-3"></i> <span>Áo dài 5 thân, xẻ tà duyên dáng.</span></li>
+                            <li class="flex items-start"><i class="fas fa-star text-yellow-400 mt-1 mr-3"></i> <span>Thắt lưng lụa xanh hoặc hồng tạo điểm nhấn.</span></li>
+                            <li class="flex items-start"><i class="fas fa-star text-yellow-400 mt-1 mr-3"></i> <span>Vòng cổ bạc (xà tích) lấp lánh trên nền vải trầm.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                                                <div class="bg-blue-900 h-32 rounded-lg flex items-center justify-center p-4 text-center">
+                            <span class="italic font-serif">"Đơn giản mà tinh tế"</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-teal-800 h-32 rounded-lg flex items-center justify-center p-4 text-center">
+                             <span class="italic font-serif">"Thủy chung son sắt"</span>
+                        </div>
+                                             </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Hát Then & Đàn Tính -->
+    <section id="van-hoa" class="section-padding bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase">Di sản UNESCO</span>
+                <br>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6 indigo-text hover:scale-105 transition-transform duration-300 inline-block cursor-default">Hát Then & Đàn Tính</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 text-lg">
+                    "Tiếng đàn Tính trầm bổng như tiếng suối reo, lời Then mượt mà là khúc hát giao duyên và cũng là nghi lễ tâm linh cầu an."
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-10 items-stretch">
+                <!-- Card Đàn Tính -->
+                <div class="lg:w-1/2 relative group overflow-hidden rounded-2xl shadow-xl">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Cây Đàn Tính</h3>
+                        <p class="text-gray-200">Bầu đàn làm từ quả bầu khô, dây tơ tằm. Âm thanh mộc mạc nhưng đi sâu vào lòng người.</p>
+                    </div>
+                </div>
+                
+                <!-- Content Right -->
+                <div class="lg:w-1/2 flex flex-col justify-center space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-indigo-100 rounded-full p-4 mr-4">
+                            <i class="fas fa-music text-indigo-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2 indigo-text">Đời sống tinh thần phong phú</h4>
+                            <p class="text-gray-600">Kho tàng ca dao, tục ngữ đồ sộ phản ánh trí tuệ và tâm hồn người Tày.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-indigo-100 rounded-full p-4 mr-4">
+                            <i class="fas fa-praying-hands text-indigo-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2 indigo-text">Ý nghĩa tâm linh</h4>
+                            <p class="text-gray-600">Then không chỉ là nghệ thuật, mà còn là nghi lễ cầu mưa thuận gió hòa, mùa màng tươi tốt, giải hạn cầu an.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-indigo-500 italic text-gray-700">
+                        "Di sản văn hóa phi vật thể đại diện của nhân loại đã được UNESCO ghi danh."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Ẩm thực -->
+    <section id="am-thuc" class="section-padding bg-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-green-800 hover:scale-105 transition-transform duration-300 inline-block cursor-default">Tinh hoa Bánh chưng Bờ Đậu</h2>
+                    <p class="text-gray-700 mb-6 text-lg">
+                        Món quà quê trân quý gửi đi khắp mọi miền tổ quốc. Nhắc đến ẩm thực người Tày Thái Nguyên, không thể bỏ qua làng nghề truyền thống Bờ Đậu (huyện Phú Lương).
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-leaf text-green-600 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Nguyên liệu tuyển chọn</h4>
+                                <p class="text-sm text-gray-600">Gạo nếp nương, lá dong rừng xanh ngắt, nước giếng khơi trong mát.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-cube text-green-600 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Kỹ thuật gói độc đáo</h4>
+                                <p class="text-sm text-gray-600">Gói tay không cần khuôn mà vẫn vuông thành sắc cạnh.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-utensils text-green-600 text-2xl mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Hương vị khó quên</h4>
+                                <p class="text-sm text-gray-600">Bánh dẻo rền, màu xanh ngọc bích, thơm ngậy vị đậu xanh và thịt lợn.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-green-200 rounded-full opacity-50 blur-2xl"></div>
+                                     </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">Văn Hóa Người Tày Thái Nguyên</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Hãy đến và trải nghiệm vẻ đẹp bình dị, lòng mến khách và những nét văn hóa độc đáo của đồng bào nơi đây.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-sm text-gray-500">
+                &copy; 2024 Bản quyền nội dung thuộc về bài viết "Người Tày - Sắc Chàm Thủy Chung".
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
