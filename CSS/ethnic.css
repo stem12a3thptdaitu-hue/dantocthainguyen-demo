@@ -1,0 +1,102 @@
+/* ================================================= */
+/* ETHNIC.CSS - CSS DÙNG CHUNG CHO CÁC TRANG DÂN TỘC */
+/* ================================================= */
+
+/* 1. THIẾT LẬP CHUNG CHO TRANG DÂN TỘC */
+body.ethnic-page {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: var(--ethnic-bg-body, #FAFAFA);
+    background-image: var(--ethnic-pattern, none);
+}
+
+.ethnic-page h1, .ethnic-page h2, .ethnic-page h3, .ethnic-page h4 {
+    font-family: 'Merriweather', serif;
+}
+
+/* 2. CÁC CLASS TIỆN ÍCH DỰA TRÊN BIẾN */
+.primary-bg { background-color: var(--ethnic-primary, #333) !important; }
+.primary-text { color: var(--ethnic-primary, #333) !important; }
+.secondary-bg { background-color: var(--ethnic-secondary, #eee) !important; }
+.text-accent { color: var(--ethnic-accent, #d35400) !important; }
+.section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+
+.image-card {
+    transition: transform 0.3s ease-in-out;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.image-card:hover { transform: translateY(-5px); }
+
+.pattern-bg {
+    position: absolute; inset: 0;
+    background-image: var(--ethnic-pattern-dot, none);
+    background-size: 20px 20px;
+    opacity: 0.05;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 3. HERO SECTION */
+.ethnic-hero {
+    position: relative; height: 100vh; display: flex;
+    align-items: center; justify-content: center;
+    background-color: var(--ethnic-primary); color: #fff; overflow: hidden;
+}
+.ethnic-hero-overlay {
+    position: absolute; inset: 0; z-index: 0; opacity: 0.5;
+    object-fit: cover; width: 100%; height: 100%;
+}
+.ethnic-hero-content {
+    position: relative; z-index: 10; text-align: center; padding: 0 1rem;
+}
+.ethnic-hero-btn {
+    display: inline-block;
+    background-color: #fff; color: var(--ethnic-primary);
+    padding: 0.75rem 2rem; border-radius: 9999px;
+    font-weight: 600; transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5); margin-top: 2rem;
+    text-decoration: none;
+}
+.ethnic-hero-btn:hover {
+    background-color: rgba(255,255,255,0.9); transform: scale(1.05);
+}
+
+/* 4. FOOTER RIÊNG */
+.ethnic-page footer {
+    background-color: var(--ethnic-primary) !important;
+    border-top-color: var(--ethnic-accent) !important;
+    color: #fff !important;
+    border-image: none !important;
+}
+
+/* 5. NAVIGATION BOTTOM */
+.ethnic-navigation {
+    padding: 3rem 0; background-color: rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.ethnic-nav-btn {
+    display: inline-flex; align-items: center; padding: 10px 20px;
+    background: #fff; color: #333; border-radius: 5px;
+    text-decoration: none; font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s;
+}
+.ethnic-nav-btn:hover {
+    background: var(--ethnic-primary); color: #fff; transform: translateY(-3px);
+}
+
+/* ================================================= */
+/* ĐỊNH NGHĨA BIẾN MÀU (THEME) */
+/* ================================================= */
+body.ethnic-tay { --ethnic-bg-body: #f8f9fa; --ethnic-primary: #2E4053; --ethnic-secondary: #EBF5FB; --ethnic-accent: #D35400; --ethnic-pattern-dot: radial-gradient(#2E4053 1px, transparent 1px); }
+body.ethnic-nung { --ethnic-bg-body: #F0F4C3; --ethnic-primary: #33691E; --ethnic-secondary: #DCEDC8; --ethnic-accent: #FBC02D; }
+body.ethnic-dao { --ethnic-bg-body: #FFF3E0; --ethnic-primary: #B71C1C; --ethnic-secondary: #FFEBEE; --ethnic-accent: #FFC107; --ethnic-pattern-dot: radial-gradient(#B71C1C 1px, transparent 1px); }
+body.ethnic-mong { --ethnic-bg-body: #F3F4F6; --ethnic-primary: #374151; --ethnic-secondary: #E11D48; --ethnic-accent: #D97706; --ethnic-pattern: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 17l-7-7h14l-7 7z' fill='%23374151' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E"); }
+body.ethnic-sanchay { --ethnic-bg-body: #E0F2F1; --ethnic-primary: #00695C; --ethnic-secondary: #B2DFDB; --ethnic-accent: #EC407A; }
+body.ethnic-sandiu { --ethnic-bg-body: #FAFAFA; --ethnic-primary: #5D4037; --ethnic-secondary: #3F51B5; --ethnic-accent: #D84315; --ethnic-pattern-dot: repeating-linear-gradient(45deg, #5D4037 0, #5D4037 1px, transparent 0, transparent 50%); }
+body.ethnic-thai { --ethnic-bg-body: #FAFAFA; --ethnic-primary: #6A1B9A; --ethnic-secondary: #E1BEE7; --ethnic-accent: #C2185B; --ethnic-pattern-dot: linear-gradient(135deg, #6A1B9A 25%, transparent 25%); }
+body.ethnic-kinh { --ethnic-bg-body: #fdfbf7; --ethnic-primary: #922B21; --ethnic-secondary: #FAE5D3; --ethnic-accent: #D68910; }
+body.ethnic-hoa { --ethnic-bg-body: #FFF8E1; --ethnic-primary: #B71C1C; --ethnic-secondary: #FFC107; --ethnic-accent: #F57F17; }
+body.ethnic-muong { --ethnic-bg-body: #F5F5DC; --ethnic-primary: #3E2723; --ethnic-secondary: #F9A825; --ethnic-accent: #C62828; }
+body.ethnic-ngai { --ethnic-bg-body: #FDF5E6; --ethnic-primary: #5D4037; --ethnic-secondary: #283593; --ethnic-accent: #BF360C; }
